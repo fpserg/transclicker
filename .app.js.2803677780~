@@ -1,0 +1,8 @@
+import express from 'express'
+import { PORT, TOKEN } from './config.js'
+import { Telegraf, session } from 'telegraf'
+
+const app = express()
+const bot = new Telegraf(TOKEN)
+
+bot.use(session()  )
